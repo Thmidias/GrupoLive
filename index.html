@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição para a Live Secreta</title>
     
+    <!-- Script do Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1072242874535832'); // Pixel ID Inserido
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1072242874535832&ev=PageView&noscript=1" // Pixel ID Inserido
+    /></noscript>
+    <!-- Fim do Script do Facebook Pixel -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,8 +60,11 @@
                 <p class="text-gray-400 mt-1">Toda Segunda-feira, às 20h.</p>
                 
                 <div class="mt-6">
-                    <!-- Botão que leva diretamente para o grupo do WhatsApp -->
-                    <a href="https://chat.whatsapp.com/KCNNF3adEfH8TNtSvD4qA7" target="_blank" class="cta-button inline-block w-full bg-green-500 text-gray-900 font-bold text-lg py-4 px-8 rounded-lg uppercase tracking-wider">
+                    <!-- Botão com o evento de clique do Pixel adicionado -->
+                    <a href="https://chat.whatsapp.com/KCNNF3adEfH8TNtSvD4qA7" 
+                       target="_blank" 
+                       onclick="fbq('track', 'Lead');" 
+                       class="cta-button inline-block w-full bg-green-500 text-gray-900 font-bold text-lg py-4 px-8 rounded-lg uppercase tracking-wider">
                         Entrar no grupo VIP!
                     </a>
                 </div>
@@ -69,7 +90,3 @@
 </body>
 </html>
 
-    </footer>
-
-</body>
-</html>
